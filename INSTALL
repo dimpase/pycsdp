@@ -1,0 +1,25 @@
+This is still beta stage and needs changes and might be subject to API changes.
+INTRODUCTION
+  The intention of this package is to provide an easy to use interface to the
+  COIN-OR semidefinite programming library CSDP.
+  within a python environment.
+REQUIREMENTS
+  - gcc
+    http://gcc.gnu.org/
+  - python (tested with 2.6)
+    http://python.org/
+  - numpy
+    http://numpy.scipy.org/
+  - csdp
+    https://projects.coin-or.org/Csdp/
+    (TODO: Provide option to build csdp inplace)
+INSTALL
+  First adapt the include,library path and library name of the csdp module in
+  setup.py.
+  (TODO to this more cleverly). Afterwards install the package with
+  python setup.py install (For instance locally by python setup.py install --prefix=$HOME/.local on Linux)
+
+USAGE
+  See ./examples/example.py.
+  Run the examples with
+    python example.py

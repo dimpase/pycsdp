@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 from os.path import join
+import os
+SAGE_LIB = os.environ['SAGE_LOCAL']+'/lib'
+SAGE_INCLUDE = os.environ['SAGE_LOCAL']+'/include'
 
 def configuration(parent_package='',top_path=None):
     from numpy.distutils.misc_util import Configuration
@@ -10,8 +13,8 @@ def configuration(parent_package='',top_path=None):
     # provide the location of the "declarations.h" file.
     ##########################################################################
     libname = 'sdp'
-    library_dir = ['/usr/local/numerics/lib']
-    includes = ['/usr/local/numerics/include/',
+    library_dir = [SAGE_LIB]
+    includes = [SAGE_INCLUDE+'/sdp',
                 '.']
 
     sources = [join('Src/','*.cxx'),

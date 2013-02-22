@@ -14,3 +14,13 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+------------------------------------------------
+
+Adapted for installing into Sage (i.e. at sage -sh prompt),
+and linking with CSDP from here:
+http://github.org/dimpase/csdp
+(which should also be installed at sage -sh prompt
+using ./configure --prefix=$SAGE_LOCAL; make; make install
+sequence)
+

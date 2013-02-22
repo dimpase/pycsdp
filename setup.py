@@ -14,8 +14,7 @@ def configuration(parent_package='',top_path=None):
     ##########################################################################
     libname = 'sdp'
     library_dir = [SAGE_LIB]
-    includes = [SAGE_INCLUDE+'/sdp',
-                '.']
+    includes = [SAGE_INCLUDE, '.']
 
     sources = [join('Src/','*.cxx'),
                join('Src/','*.c'),
@@ -28,8 +27,6 @@ def configuration(parent_package='',top_path=None):
                          library_dirs = library_dir,
                          extra_compile_args = ['-funroll-loops'],
                          define_macros = [('NOSHORTS',None)],
-#                          define_macros = [('NOSHORTS',None),
-#                                           ('USEATLAS',None)],
                          libraries = [libname],
                          extra_info = lapack_opt)
     return config

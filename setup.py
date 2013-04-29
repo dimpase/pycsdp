@@ -14,7 +14,7 @@ def configuration(parent_package='',top_path=None):
     ##########################################################################
     libname = 'sdp'
     library_dir = [SAGE_LIB]
-    includes = [SAGE_INCLUDE, '.']
+    includes = [SAGE_INCLUDE, SAGE_INCLUDE+'/csdp', '.']
 
     sources = [join('Src/','*.cxx'),
                join('Src/','*.c'),

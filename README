@@ -21,6 +21,7 @@ Adapted for installing into Sage (i.e. at sage -sh prompt),
 and linking with CSDP from here:
 http://github.org/dimpase/csdp
 (which should also be installed at sage -sh prompt
-using ./configure --prefix=$SAGE_LOCAL; make; make install
+using 
+./configure CPPFLAGS=-DNOSHORTS --prefix=$SAGE_LOCAL; make; make install
 sequence)
 
